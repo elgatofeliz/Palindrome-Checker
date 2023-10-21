@@ -20,16 +20,17 @@ We'll also pass strings with special symbols, such as 2A3*3a2, 2A3 3a2, and 2_A3
 ### Code
 
     function palindrome(str) {
+    
       const workString = str.replace(/[^A-Za-z0-9]/g,'').toLowerCase().split("")
     
       let check = false
     
         for (let i = 0; i < workString.length / 2; i++){
     
-          console.log(workString[i], workString[workString.length - i - 1])
           if(workString[i] === workString[workString.length - i - 1]){
             check = true
           }
+          
           if(workString[i] !== workString[workString.length - i - 1]){
             return false
           }
